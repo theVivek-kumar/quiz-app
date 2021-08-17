@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz application</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color:#341f95;
+
+        }
+        .welcome_text{
+            background-color:#5c43c9;
+            margin: 20vh;
+            padding: 2rem;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: rgb(0, 0, 0);
+        }
+        .welcome_form input,
+        .welcome_form button{
+            display: block;
+            width: 100%;
+            
+        }
+        .welcome_form input{
+            margin-bottom: 10px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            color: beige;
+            font-size: 30px;
+            text-align: center;
+        }
+        .welcome_form  button {
+            padding: 20px 0px;
+            font-size: 22px;
+            background-color: white;
+            border: none;
+            border-radius: 100px;
+            color: rgb(31, 32, 32);
+            transition: 0.4s all;
+            box-shadow: 15px;
+        
+        }
+        .welcome_form button:hover 
+        {
+            transform: translateY(-3px);
+        }
+        .welcome_form input:focus,
+        .welcome_form button:focus{
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="welcome_text">
+         <form class="welcome_form">
+             <input type="text" placeholder="write something">
+             <button type="submit" > Start Quiz</button>
+
+         </form>
+        </div>
+
+
+    </div>
+    
+
+    
+    <script src="js/quiz.js" ></script>
+</body>
+</html>
