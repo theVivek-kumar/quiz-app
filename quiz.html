@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Quiz</title>
+    <style>
+
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color:#341f95;
+        }
+        .quiz{
+            display: grid;
+            grid-template-rows: 60px auto;
+            width: 800px;
+            height: 500px;
+            background-color: rgb(201, 225, 241);
+            border-radius: 3px;
+          
+        }
+        .quiz_header{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(255, 255, 255);
+            border-radius: 3px;
+            box-shadow: 0px 2px 5px 1px rgb(0, 0, 0,0.3);
+            z-index: 1;
+        }
+        .quiz_body{
+            padding: 30px;
+            background-color: #ecf0f1;
+            border-radius: 3px;
+        }
+        .quiz_user{
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+
+        }
+        .quiz_timer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 10px;
+            background-color: #341f95;
+            color: #ecf0f1;
+            padding: 0 30px;
+
+
+        }
+        .option_group{
+            list-style-type: none;
+            margin: 30px 0;
+
+        }
+        .option{
+            background-color: #ffffff;
+            width: 300px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 100px;
+            box-shadow: 0px 2px 5px 1px rgb(0, 0, 0,0.3);
+            z-index: 1;
+            border: 2px solid transparent;
+            font-size: 18px;
+            
+        }
+        .option:hover{
+            cursor: pointer;
+            border: 2px solid rgb(92, 90, 90);
+            color: rgb(107, 103, 103);
+        }
+        .btn-next{
+              background-color: #341f95;
+              border-radius: 100px;
+              box-shadow: 0px 2px 5px 2px rgb(0, 0, 0,0.5);
+            z-index: 1;
+            border: 2px solid transparent;
+            width: 200px;
+            height: 50px;
+            color: aliceblue;
+            transition: 0.4s all;
+        }
+        .btn-next:hover{
+            cursor: pointer;
+            color: cadetblue;
+            transform: translateY(-3px);
+            background-color: rgb(255, 255, 255);
+            color: black;
+            
+        }
+        .active{
+            background-color: #341f95;
+            color: #ffffff !important;
+
+        }
+        .text{
+            display: flex;
+            align-items: center;
+          
+            color: #2c2d2e;
+            padding: 0 30px;
+            height: 100%;
+            border-radius: 5px;
+            font-size: 18px;
+            background-position: left;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="quiz">
+            <div class="quiz_header ">
+            <div class="quiz_user">
+                    <h4 class="text">Welcome ! to my quiz</h4>
+                  </div>
+                   <div class="quiz_timer">
+                         <span class="time">00:00</span>
+
+
+                    </div>
+                  </div>
+            <div class="quiz_body">
+               <div id="questions">
+                <!-- <h2>Q1:  Grand Central Terminal, Park Avenue, New York is the world's</h2>
+                <ul class="option_group">
+                   <li class="option">option1</li>
+                   <li class="option">option 2</li>
+                   <li class="option">option 3</li>
+                   <li class="option">option 4</li>
+                </ul> -->
+               </div>
+                <button class="btn-next" onclick="next()"> Next Question</button>
+            
+            
+            
+            
+            </div>
+            </div>
+    </div>
+    <script src="js/quiz.js"></script>
+   
+</body>
+</html>
