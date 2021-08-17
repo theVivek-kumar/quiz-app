@@ -55,11 +55,25 @@ function submitForm(e){
     //store player name//
     location.href="quiz.html";
     sessionStorage.setItem("name",name);
-    console.log(name);
+    location.href =" quiz.html";
 }
 
 let question_count = 0;
+let point = 0;
+
 function next() {
+
+    if(question_count == questions.length - 1) {
+        location.href = "end.html";
+        return 0;
+    }
+    let user_answer=document.querySelector("li.option.active").innerHTML;
+
+   if(user_answer== questions[question_count].answer)
+   {
+     point+=10;
+     sessionStorage.setItem("points",point);
+   }
     question_count++;
     show(question_count);
 }
@@ -80,6 +94,7 @@ function next() {
          
          
          `;
+
          toggleActive();
      
 }
@@ -87,6 +102,11 @@ function toggleActive(){
     let option =document.querySelectorAll("li.option")
     for(let i=0;i<option.length;i++){
         option[i].onclick = function(){
+            for(let j=0;j<option.length;j++){
+                if(option[j].classList.contains("active")){
+                    option[j].classList.remove("active");
+                }
+            }
             option[i].classList.add("active")
         }
     }
