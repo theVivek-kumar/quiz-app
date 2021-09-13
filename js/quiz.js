@@ -64,9 +64,10 @@ let point = 0;
 function next() {
 
     if(question_count == questions.length - 1) {
-        location.href = "end.html";
+    location.href =" end.html";
         return 0;
-    }
+    } 
+    
     let user_answer=document.querySelector("li.option.active").innerHTML;
 
    if(user_answer== questions[question_count].answer)
